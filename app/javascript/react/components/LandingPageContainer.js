@@ -25,15 +25,29 @@ const LandingPageContainer = (props) =>{
   })
 
   return (
-    <div>
-    <div className="left column">
-    hello world words etc
-    </div>
-    <div className="right column">
-    {phrase}
-    </div>
-    <div className="bottom row">
-    </div>
+    <div className="container">
+      <div className="row topRow">
+      <div className="col leftColumn">
+        <h1>hello world words etc</h1>
+        <h1>hello world words etc</h1>
+        <h1>hello world words etc</h1>
+        <img alt="backpacking" src={backpacking} />
+      </div>
+      <div className="col rightColumn">
+        {phrase}
+      </div>
+      </div>
+      <div className="row bottomRow">
+        <div className="col">
+          <h2><button>Backpacking</button></h2>
+        </div>
+        <div className="col">
+          <h2><button>Camping</button></h2>
+        </div>
+        <div className="col">
+          <h2><button>Hiking</button></h2>
+        </div>
+      </div>
     </div>
   )
 }
