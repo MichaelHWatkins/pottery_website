@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import banner from '../../../assets/images/banner.png'
-import backpacking from '../../../assets/images/backpacking.png'
-import camping from '../../../assets/images/camping.png'
-import hiking from '../../../assets/images/hiking.png'
+import banner from '../../../assets/images/rainbowsLogo-1.png'
+import hi from '../../../assets/images/HI.jpg'
+import storeFront from '../../../assets/images/storeFront.jpg'
+import thomasplate from '../../../assets/images/thomasplate.jpg'
+
+
 
 const LandingPageContainer = (props) =>{
 
-  const textArray = [<img alt="backpacking" src={backpacking} />, <img alt="camping" src={camping} />,<img alt="hiking" src={hiking} />]
+  const textArray = [<img alt="HI" src={hi}/>, <img alt="storeFront" src={storeFront}/>,<img alt="thomasplate" src={thomasplate}/>]
 
   const [seconds, setSeconds] = useState(0);
   const [phrase, setPhrase] = useState(textArray[seconds % textArray.length])
@@ -25,29 +27,25 @@ const LandingPageContainer = (props) =>{
   })
 
   return (
+
     <div className="container">
-      <div className="row topRow">
-      <div className="col leftColumn">
-        <h1>hello world words etc</h1>
-        <h1>hello world words etc</h1>
-        <h1>hello world words etc</h1>
-        <img alt="backpacking" src={backpacking} />
+    <div className="row header">
+      <img alt="banner" src={banner} />
+    </div>
+    <div className="row midReel">
+      {phrase}
+    </div>
+    <div className="row bottomRow">
+      <div className="col">
+        <h2><button>Contact Us</button></h2>
       </div>
-      <div className="col rightColumn">
-        {phrase}
+      <div className="col">
+        <h2><button>About The Owner</button></h2>
       </div>
+      <div className="col">
+        <h2><button>Gallery</button></h2>
       </div>
-      <div className="row bottomRow">
-        <div className="col">
-          <h2><button>Backpacking</button></h2>
-        </div>
-        <div className="col">
-          <h2><button>Camping</button></h2>
-        </div>
-        <div className="col">
-          <h2><button>Hiking</button></h2>
-        </div>
-      </div>
+    </div>
     </div>
   )
 }

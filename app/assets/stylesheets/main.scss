@@ -12,7 +12,16 @@ h1 {
 
 .bottomRow {
   display: block;
-  border-top: 10px solid #ccc;
+  border-top: 10px solid #000000;
   margin: 0 15px;
+  padding: 50px;
+}
+
+.header {
+  border-bottom: 10px solid #000000;
+  padding-bottom: 50px;
+}
+
+.midReel {
   padding: 50px;
 }
